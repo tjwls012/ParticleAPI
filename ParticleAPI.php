@@ -6,7 +6,7 @@
  * @author ["Securti"]
  * @version 0.1
  * @api 3.10.0
- * @description This plugin is made by Securti. :3
+ * @description License : LGPL 3.0
  */
  
  namespace securti\particleapi;
