@@ -4,8 +4,8 @@
  * @name ParticleAPI
  * @main securti\particleapi\ParticleAPI
  * @author ["Securti"]
- * @version 0.1
- * @api 3.10.0
+ * @version 0.2
+ * @api 3.12.0
  * @description License : LGPL 3.0
  */
  
