@@ -71,8 +71,8 @@ class ParticleAPI extends PluginBase implements Listener{
     
       $vector = $vector_1;
       
-      $x1 = $vector_1->getX() - $i * (-\sin ($yaw / 180 * M_PI));
-      $y1 = $vector_1->getY() - $i * (-\sin ($pitch / 180 * M_PI));
+      $x1 = $vector_1->getX() - $i * (-\sin($yaw / 180 * M_PI));
+      $y1 = $vector_1->getY() - $i * (-\sin($pitch / 180 * M_PI));
       $z1 = $vector_1->getZ() - $i * (\cos($yaw / 180 * M_PI));
       
       $vector = new Vector3($x1, $y1, $z1);
@@ -89,11 +89,11 @@ class ParticleAPI extends PluginBase implements Listener{
     
     for($i = $rotation; $i <= $rotation + 360; $i += $r){
     
-      $x1 = ($i == $rotation) ? $vector->getX() + $radius * (-\sin ($i / 180 * M_PI)) : $x2;
+      $x1 = ($i == $rotation) ? $vector->getX() + $radius * (-\sin($i / 180 * M_PI)) : $x2;
       $y1 = ($i == $rotation) ? $vector->getY() : $y2;
       $z1 = ($i == $rotation) ? $vector->getZ() + $radius * (\cos($i / 180 * M_PI)) : $z2;
       
-      $x2 = $vector->getX() + $radius * (-\sin ($i / 180 * M_PI));
+      $x2 = $vector->getX() + $radius * (-\sin($i / 180 * M_PI));
       $y2 = $vector->getY();
       $z2 = $vector->getZ() + $radius * (\cos($i / 180 * M_PI));
       
