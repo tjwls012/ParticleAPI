@@ -38,7 +38,7 @@ class ParticleAPI extends PluginBase implements Listener{
   
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
   }
-  public function circleParticle($radius = 1, $unit = 15, Vector3 $center, Level $level, array $color){
+  public function circleParticle(float $radius, float $unit, Vector3 $center, Level $level, array $color){
   
     for($i = 0; $i < 360; $i += $unit){
     
@@ -53,7 +53,7 @@ class ParticleAPI extends PluginBase implements Listener{
       $level->addParticle(new DustParticle($vector, $color[0], $color[1], $color[2]));
     }
   }
-  public function straightParticle($unit = 0.5, Vector3 $vector_1, Vector3 $vector_2, Level $level, array $color){
+  public function straightParticle(float $unit, Vector3 $vector_1, Vector3 $vector_2, Level $level, array $color){
   
     $x = $vector_1->getX() - $vector_2->getX();
     $y = $vector_1->getY() - $vector_2->getY();
@@ -78,6 +78,32 @@ class ParticleAPI extends PluginBase implements Listener{
       $vector = new Vector3($x1, $y1, $z1);
       
       $level->addParticle(new DustParticle($vector, $color[0], $color[1], $color[2]));
+    }
+  }
+  public function regularpentagonParticle(int $side, float $radius, float $unit, float $length, float $rotation, Vector3 $center, Level $level, array $color){
+  
+    $vector = $center;
+    
+    $angle = 180 * ($side - 2);
+    $r = 180 - ($angle / $side);
+    
+    for($i = $rotation; $i <= $rotation + 360; $i += $r){
+    
+      $x1 = ($i == $rotation) ? $vector->getX() + $radius * (-\sin ($i / 180 * M_PI)) : $x2;
+      $y1 = ($i == $rotation) ? $vector->getY() : $y2;
+      $z1 = ($i == $rotation) ? $vector->getZ() + $radius * (\cos($i / 180 * M_PI)) : $z2;
+      
+      $x2 = $vector->getX() + $radius * (-\sin ($i / 180 * M_PI));
+      $y2 = $vector->getY();
+      $z2 = $vector->getZ() + $radius * (\cos($i / 180 * M_PI));
+      
+      if($i !== $rotation){
+      
+        $vector_1 = new Vector3($x1, $y1, $z1);
+        $vector_2 = new Vector3($x2, $y2, $z2);
+        
+        $this->straightParticle($unit, $vector_1, $vector_2, $level, $color);
+      }
     }
   }
 }
