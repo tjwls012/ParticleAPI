@@ -9,10 +9,11 @@
  
  $instance = ParticleAPI::getInstance();
 
-> cricle
+> particles
  
+ - cricle :
  $instance->cricleParticle(int $radius, int $unit, Vector3 $center, Level $level, array $color);
 
-> straight
+ - straight :
  
  $instance->cricleParticle(int $unit, Vector3 $vector_1, Vector3 $vector_2, Level $level, array $color);
