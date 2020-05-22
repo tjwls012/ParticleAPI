@@ -80,7 +80,7 @@ class ParticleAPI extends PluginBase implements Listener{
       $level->addParticle(new DustParticle($vector, $color[0], $color[1], $color[2]));
     }
   }
-  public function regularpentagonParticle(int $side, float $radius, float $unit, float $length, float $rotation, Vector3 $center, Level $level, array $color){
+  public function regularpolygonParticle(int $side, float $radius, float $unit, float $length, float $rotation, Vector3 $center, Level $level, array $color){
   
     $vector = $center;
     
