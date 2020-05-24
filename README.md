@@ -8,14 +8,23 @@ $instance = ParticleAPI::getInstance();
 
 
 /*
+
  $radius : radius or distance from center to vertex
+
  $unit : particle spacing angle or coordinates
+
  $center, $vector_1, $vector2 : location
+
  $level : create level
+
  $color : 0 => $r, 1 => $g, 2 => $b color code
+
  $side : sides of the entire shape
+
  $length : length of the side
+
  $rotation : degree of rotation
+
 */
 
 
