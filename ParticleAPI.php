@@ -9,7 +9,7 @@
  * @description License : LGPL 3.0
  */
  
- namespace securti\particleapi;
+namespace securti\particleapi;
  
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
