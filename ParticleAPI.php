@@ -2,14 +2,14 @@
 
 /**
  * @name ParticleAPI
- * @main securti\particleapi\ParticleAPI
- * @author ["Securti"]
+ * @main tjwls012\particleapi\ParticleAPI
+ * @author ["tjwls012"]
  * @version 0.2
  * @api 3.12.0
  * @description License : LGPL 3.0
  */
  
-namespace securti\particleapi;
+namespace tjwls012\particleapi;
  
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
