@@ -1,7 +1,7 @@
 # ParticleAPI
 
 
-use securti\particleapi\ParticleAPI;
+use tjwls012\particleapi\ParticleAPI;
 
 
 $instance = ParticleAPI::getInstance();
